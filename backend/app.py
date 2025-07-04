@@ -26,9 +26,7 @@ app.register_blueprint(orders_bp, url_prefix='/api/orders')
 app.register_blueprint(reviews_bp, url_prefix='/api/reviews')
 app.register_blueprint(namaste_bp, url_prefix='/api/namaste')
 
-@app.route('/')
-def home():
-    return {"message": "HomeMadePickles Flask backend running!"}
+
 @app.route('/')
 def serve_index():
     return send_from_directory('../frontend', 'index.html')
